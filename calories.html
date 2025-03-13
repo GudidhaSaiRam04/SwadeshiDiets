@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie Tracker</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    nav {
+      background-color: #343a40;
+      padding: 10px;
+      color: white;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      margin-right: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .container {
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    footer {
+      background-color: #212529;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="trackdiet.html">Track Diet</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Basic Calories for Food Items</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Food Item</th>
+          <th>Calories (per 100g)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rice</td>
+          <td>130</td>
+        </tr>
+        <tr>
+          <td>Dal</td>
+          <td>116</td>
+        </tr>
+        <tr>
+          <td>Chicken</td>
+          <td>239</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Swadeshi Diets. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Dietitians - Swadeshi Diets</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav, footer {
+      background-color: #343a40;
+      color: white;
+      padding: 10px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .container {
+      padding: 20px;
+      flex: 1;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #343a40;
+    }
+
+    .trainer-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .trainer-card {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .trainer-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .trainer-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      max-width: 150px;
+      margin: 0 auto;
+    }
+
+    .trainer-card h3 {
+      font-size: 1.5rem;
+      color: #343a40;
+      margin-top: 15px;
+    }
+
+    .trainer-card p {
+      font-size: 1rem;
+      color: #666;
+      margin: 10px 0;
+    }
+
+    .rating {
+      color: #ff9800;
+      font-size: 1.2rem;
+      margin: 5px 0;
+    }
+
+    .experience {
+      color: #333;
+      font-size: 1rem;
+    }
+
+    .select-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .select-btn:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(52, 58, 64, 0.9);
+      color: white;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="premium.html">Premium Plans</a></li>
+      <li><a href="trainers.html">Our Trainers</a></li>
+    </ul>
+  </nav>
+
+  <!-- Trainers Page Content -->
+  <div class="container">
+    <h2>Our Personal Dietitians</h2>
+
+    <div class="trainer-cards">
+      <!-- Trainer 1 -->
+      <div class="trainer-card">
+        <img src="trainer1.jpg" alt="Trainer 1">
+        <h3>Dr. Aarti Sharma</h3>
+        <p class="rating">⭐ 4.8 (200 Reviews)</p>
+        <p class="experience">Experience: 10 Years</p>
+        <p class="specialization">Specializes in Weight Loss & Healthy Lifestyle</p>
+        <button class="select-btn" onclick="alert('You selected Dr. Aarti Sharma!')">Select</button>
+      </div>
+
+      <!-- Trainer 2 -->
+      <div class="trainer-card">
+        <img src="trainer2.jpg" alt="Trainer 2">
+        <h3>Mr. Rohit Mehta</h3>
+        <p class="rating">⭐ 4.7 (150 Reviews)</p>
+        <p class="experience">Experience: 8 Years</p>
+        <p class="specialization">Specializes in Bodybuilding & Fitness</p>
+        <button class="select-btn" onclick="alert('You selected Mr. Rohit Mehta!')">Select</button>
+      </div>
+
+      <!-- Trainer 3 -->
+      <div class="trainer-card">
+        <img src="trainer3.jpg" alt="Trainer 3">
+        <h3>Ms. Priya Sood</h3>
+        <p class="rating">⭐ 4.9 (120 Reviews)</p>
+        <p class="experience">Experience: 12 Years</p>
+        <p class="specialization">Specializes in Vegan & Plant-Based Diets</p>
+        <button class="select-btn" onclick="alert('You selected Ms. Priya Sood!')">Select</button>
+      </div>
+
+      <!-- Trainer 4 -->
+      <div class="trainer-card">
+        <img src="trainer4.jpg" alt="Trainer 4">
+        <h3>Dr. Rakesh Kumar</h3>
+        <p class="rating">⭐ 4.5 (180 Reviews)</p>
+        <p class="experience">Experience: 6 Years</p>
+        <p class="specialization">Specializes in Diabetes & Heart Health</p>
+        <button class="select-btn" onclick="alert('You selected Dr. Rakesh Kumar!')">Select</button>
+      </div>
+
+      <!-- Trainer 5 -->
+      <div class="trainer-card">
+        <img src="trainer5.jpg" alt="Trainer 5">
+        <h3>Ms. Neha Gupta</h3>
+        <p class="rating">⭐ 4.6 (170 Reviews)</p>
+        <p class="experience">Experience: 7 Years</p>
+        <p class="specialization">Specializes in Weight Management</p>
+        <button class="select-btn" onclick="alert('You selected Ms. Neha Gupta!')">Select</button>
+      </div>
+
+      <!-- Add more trainer cards as needed -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Swadeshi Diets. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

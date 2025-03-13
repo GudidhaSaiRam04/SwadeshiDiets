@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Swadeshi Diets</title>
+
+  <!-- Include Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: #f4f4f4;
+    }
+
+    nav, footer {
+      background-color: #343a40;
+      color: white;
+      padding: 10px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .container {
+      padding: 20px;
+      flex: 1;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    button {
+      background-color: #e74c3c;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c0392b;
+    }
+
+    .chart-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .chart-container canvas {
+      width: 45%;
+      height: 300px;
+    }
+
+    /* Card styling for individual users in the table */
+    .user-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .user-card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer styling */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(52, 58, 64, 0.9);
+      color: white;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="trackdiet.html">Track Diet</a></li>
+      <li><a href="suggest-dishes.html">Suggest Dishes</a></li>
+      <li><a href="feedback.html">View Feedback</a></li>
+      <li><a href="trainers.html">View Trainers</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- Admin Dashboard Content -->
+  <div class="container">
+    <h2>Admin Dashboard</h2>
+
+    <!-- Pie and Bar Charts for User Data -->
+    <div class="chart-container">
+      <!-- Pie Chart for User Subscription -->
+      <div>
+        <h3>User Subscription Distribution</h3>
+        <canvas id="pieChart"></canvas>
+      </div>
+
+      <!-- Bar Chart for User Activity -->
+      <div>
+        <h3>User Activity for Last Month</h3>
+        <canvas id="barChart"></canvas>
+      </div>
+    </div>
+
+    <!-- User Data Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Email</th>
+          <th>Subscription</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- User 1 -->
+        <tr class="user-card">
+          <td>John Doe</td>
+          <td>john@example.com</td>
+          <td>Premium</td>
+          <td><button>Delete</button></td>
+        </tr>
+        <!-- User 2 -->
+        <tr class="user-card">
+          <td>Jane Smith</td>
+          <td>jane@example.com</td>
+          <td>Free</td>
+          <td><button>Delete</button></td>
+        </tr>
+        <!-- User 3 -->
+        <tr class="user-card">
+          <td>Emily Johnson</td>
+          <td>emily@example.com</td>
+          <td>Free</td>
+          <td><button>Delete</button></td>
+        </tr>
+        <!-- User 4 -->
+        <tr class="user-card">
+          <td>Michael Brown</td>
+          <td>michael@example.com</td>
+          <td>Premium</td>
+          <td><button>Delete</button></td>
+        </tr>
+        <!-- User 5 -->
+        <tr class="user-card">
+          <td>Linda Davis</td>
+          <td>linda@example.com</td>
+          <td>Free</td>
+          <td><button>Delete</button></td>
+        </tr>
+        <!-- User 6 -->
+        <tr class="user-card">
+          <td>David Wilson</td>
+          <td>david@example.com</td>
+          <td>Premium</td>
+          <td><button>Delete</button></td>
+        </tr>
+        <!-- User 7 -->
+        <tr class="user-card">
+          <td>Olivia Harris</td>
+          <td>olivia@example.com</td>
+          <td>Free</td>
+          <td><button>Delete</button></td>
+        </tr>
+        <!-- User 8 -->
+        <tr class="user-card">
+          <td>James Clark</td>
+          <td>james@example.com</td>
+          <td>Premium</td>
+          <td><button>Delete</button></td>
+        </tr>
+        <!-- User 9 -->
+        <tr class="user-card">
+          <td>Charlotte Lewis</td>
+          <td>charlotte@example.com</td>
+          <td>Free</td>
+          <td><button>Delete</button></td>
+        </tr>
+        <!-- User 10 -->
+        <tr class="user-card">
+          <td>William Walker</td>
+          <td>william@example.com</td>
+          <td>Premium</td>
+          <td><button>Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <script>
+    // Pie Chart for User Subscription Distribution
+    const pieChartCtx = document.getElementById('pieChart').getContext('2d');
+    const pieChart = new Chart(pieChartCtx, {
+      type: 'pie',
+      data: {
+        labels: ['Premium', 'Free'],
+        datasets: [{
+          label: 'User Subscription',
+          data: [6, 4], // 6 Premium, 4 Free users (adjust as needed)
+          backgroundColor: ['#007bff', '#28a745'],
+          borderColor: '#fff',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+        },
+      }
+    });
+
+    // Bar Chart for User Activity over the last month
+    const barChartCtx = document.getElementById('barChart').getContext('2d');
+    const barChart = new Chart(barChartCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+        datasets: [{
+          label: 'User Activity',
+          data: [40, 60, 80, 100], // Example data for user activity
+          backgroundColor: '#007bff',
+          borderColor: '#0056b3',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        },
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+        },
+      }
+    });
+  </script>
+
+</body>
+</html>

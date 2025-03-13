@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suggest Dishes</title>
+  <style>
+    body, nav, footer {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      margin-right: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .container {
+      padding: 20px;
+    }
+    form input, form button {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .suggestions {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="suggest-dishes.html">Suggest Dishes</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Suggest Dishes</h2>
+    <form>
+      <input type="text" placeholder="Enter available groceries">
+      <button type="submit">Suggest Dishes</button>
+    </form>
+
+    <div class="suggestions">
+      <h3>Suggested Dishes:</h3>
+      <ul>
+        <li>Dal Khichdi</li>
+        <li>Vegetable Curry</li>
+        <li>Rice Pulao</li>
+      </ul>
+    </div>
+  </div>
+
+  
+</body>
+</html>
